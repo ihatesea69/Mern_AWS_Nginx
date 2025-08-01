@@ -1,0 +1,256 @@
+# ===================================
+# ProShop Project - Complete .gitignore
+# ===================================
+
+# ===== NODE.JS =====
+# Dependencies
+node_modules/
+/node_modules
+/.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+/coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# ===== ENVIRONMENT VARIABLES =====
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.production
+.env.test
+
+# ===== REACT BUILD =====
+# Production build
+/build
+frontend/build/
+frontend/dist/
+build/
+dist/
+
+# React development
+frontend/.eslintcache
+
+# ===== LOGS =====
+logs
+*.log
+
+# ===== UPLOADS & MEDIA =====
+# User uploaded files
+uploads/
+backend/uploads/
+frontend/public/uploads/
+
+# Images (except sample/demo images)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+!frontend/public/images/
+!frontend/src/assets/
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+
+# Audio
+*.mp3
+*.wav
+*.flac
+
+# ===== DATABASE =====
+# MongoDB
+*.db
+data/
+mongodb/
+
+# SQLite
+*.sqlite
+*.sqlite3
+
+# ===== TERRAFORM =====
+# Terraform files
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfvars
+terraform/.terraform.tfstate.lock.info
+terraform/crash.log
+terraform/crash.*.log
+terraform/override.tf
+terraform/override.tf.json
+terraform/*_override.tf
+terraform/*_override.tf.json
+
+# ===== AWS =====
+.aws/
+aws-exports.js
+
+# ===== IDE & EDITORS =====
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ===== OPERATING SYSTEMS =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===== SECURITY & KEYS =====
+# SSH Keys
+*.pem
+*.key
+*.crt
+*.csr
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# SSL Certificates
+*.p12
+*.pfx
+
+# API Keys & Secrets
+secrets.json
+config/secrets.js
+.secrets
+
+# ===== TESTING =====
+# Test coverage
+.nyc_output/
+
+# ===== CACHE =====
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# ===== TEMPORARY FILES =====
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# ===== BACKUP FILES =====
+*.bak
+*.backup
+*.old
+*.orig
+
+# ===== PACKAGE MANAGERS =====
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# pnpm
+.pnpm-store/
+
+# ===== MISC =====
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# parcel-bundler cache
+.parcel-cache
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/

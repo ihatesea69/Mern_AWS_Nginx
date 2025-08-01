@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+# AWS Configuration
+aws_region = "us-east-1"
+
+# Project Configuration
+project_name = "proshop"
+instance_type = "t3.small"  # or t3.medium for better performance
+
+# SSH Key Configuration
+# Generate SSH key: ssh-keygen -t rsa -b 4096 -f ~/.ssh/proshop-key
+# Then paste the content of ~/.ssh/proshop-key.pub here
+public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC... your-public-key-here"
+
+# Git Repository
+# Replace with your actual repository URL
+git_repo_url = "https://github.com/your-username/proshop.git"
+
+# Domain Configuration
+# Use your domain name or "_" for any domain
+domain_name = "your-domain.com"  # or "_"
+
+# Application Configuration
+mongodb_uri = "mongodb://localhost:27017/proshop"
+jwt_secret = "your-super-secret-jwt-key-change-this-in-production"
+paypal_client_id = "your-paypal-client-id"
+node_env = "production"
