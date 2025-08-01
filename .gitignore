@@ -82,8 +82,12 @@ frontend/public/uploads/
 *.bmp
 *.tiff
 *.svg
+# Allow demo/sample images
 !frontend/public/images/
 !frontend/src/assets/
+!**/images/
+!**/sample*/
+!**/demo*/
 
 # Videos
 *.mp4

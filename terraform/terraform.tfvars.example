@@ -2,15 +2,16 @@
 
 # AWS Configuration
 aws_region = "us-east-1"
+aws_access_key_id = "your-aws-access-key-id"
+aws_secret_access_key = "your-aws-secret-access-key"
 
 # Project Configuration
 project_name = "proshop"
 instance_type = "t3.small"  # or t3.medium for better performance
 
 # SSH Key Configuration
-# Generate SSH key: ssh-keygen -t rsa -b 4096 -f ~/.ssh/proshop-key
-# Then paste the content of ~/.ssh/proshop-key.pub here
-public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC... your-public-key-here"
+# Sử dụng existing key pair đã tạo trên AWS Console
+key_name = "MERN_Server"
 
 # Git Repository
 # Replace with your actual repository URL

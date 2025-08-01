@@ -20,7 +20,7 @@ output "website_url" {
 
 output "ssh_command" {
   description = "SSH command to connect to the instance"
-  value       = "ssh -i ~/.ssh/proshop-key ubuntu@${aws_instance.proshop_server.public_ip}"
+  value       = "ssh -i ~/.ssh/${var.key_name}.pem ubuntu@${aws_instance.proshop_server.public_ip}"
 }
 
 output "vpc_id" {
@@ -44,7 +44,7 @@ output "deployment_status" {
     🚀 ProShop Deployment Complete!
     
     📍 Website URL: http://${aws_instance.proshop_server.public_ip}
-    🔗 SSH Access: ssh -i ~/.ssh/proshop-key ubuntu@${aws_instance.proshop_server.public_ip}
+    🔗 SSH Access: ssh -i ~/.ssh/${var.key_name}.pem ubuntu@${aws_instance.proshop_server.public_ip}
     
     📋 To check deployment status:
     1. SSH into the instance

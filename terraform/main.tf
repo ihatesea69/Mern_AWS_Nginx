@@ -9,7 +9,9 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region     = var.aws_region
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
 }
 
 # Data source để lấy AMI Ubuntu 22.04 LTS mới nhất
@@ -140,21 +142,14 @@ resource "aws_security_group" "proshop_sg" {
   }
 }
 
-# Key Pair
-resource "aws_key_pair" "proshop_key" {
-  key_name   = "${var.project_name}-key"
-  public_key = var.public_key
-
-  tags = {
-    Name = "${var.project_name}-key"
-  }
-}
+# Sử dụng existing key pair thay vì tạo mới
+# Key pair "MERN_Server" đã được tạo sẵn trên AWS Console
 
 # EC2 Instance
 resource "aws_instance" "proshop_server" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
-  key_name               = aws_key_pair.proshop_key.key_name
+  key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.proshop_sg.id]
   subnet_id              = aws_subnet.proshop_public_subnet.id
 

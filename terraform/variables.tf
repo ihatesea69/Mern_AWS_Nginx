@@ -4,6 +4,18 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
+variable "aws_access_key_id" {
+  description = "AWS Access Key ID"
+  type        = string
+  sensitive   = true
+}
+
+variable "aws_secret_access_key" {
+  description = "AWS Secret Access Key"
+  type        = string
+  sensitive   = true
+}
+
 variable "project_name" {
   description = "Name of the project"
   type        = string
@@ -16,12 +28,10 @@ variable "instance_type" {
   default     = "t3.small"
 }
 
-variable "public_key" {
-  description = "Public key for SSH access"
+variable "key_name" {
+  description = "Name of existing AWS key pair (e.g., MERN_Server)"
   type        = string
-  # Bạn cần tạo SSH key pair và paste public key vào đây
-  # Ví dụ: ssh-keygen -t rsa -b 4096 -f ~/.ssh/proshop-key
-  # Sau đó copy nội dung file ~/.ssh/proshop-key.pub
+  default     = "MERN_Server"
 }
 
 variable "git_repo_url" {
